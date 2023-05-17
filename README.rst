@@ -1,7 +1,7 @@
-Installing Anchore CLI from source
+Installing Nextlinux CLI from source
 ==================================
 
-The Anchore grafeas CLI can be installed from source using the Python
+The Nextlinux grafeas CLI can be installed from source using the Python
 pip utility. The utility connects to an existing nextlinux-engine DB and
 constructs grafeas note and occurrence documents.  Below is an example
 installation if, say, one were running a fresh container based on
@@ -16,7 +16,7 @@ centos:latest
     pip install --upgrade . 
     cd ..
 
-Using Anchore Grafeas CLI
+Using Nextlinux Grafeas CLI
 ==================================
 
 The pre-requisites for using this tool are that there is an existing
@@ -33,7 +33,7 @@ how to install nextlinux-engine.
 Once nextlinux-engine is up and running (we also recommend adding some
 images to nextlinux-engine, in order to get package notes and
 package-vulnerability occurrences), the general flow is to set the
-ANCHORE_DB_CONNECT environment to the connect string for the
+NEXTLINUX_DB_CONNECT environment to the connect string for the
 nextlinux-engine DB, and then use the tool to list and then generate
 vulnerability/package note JSON documents.  To generate grafeas
 package-vulnerability occurrences, set GRAFEAS_HOSTPORT environment to
@@ -42,7 +42,7 @@ generate package-vulnerability occurrence JSON documents.
 
 .. code::
 
-    export ANCHORE_DB_CONNECT="postgresql+pg8000://postgres:<your-nextlinux-db-password>@<your-nextlinux-db-host>:5432/postgres"
+    export NEXTLINUX_DB_CONNECT="postgresql+pg8000://postgres:<your-nextlinux-db-password>@<your-nextlinux-db-host>:5432/postgres"
     nextlinux-grafeas note vulnerabilities
     nextlinux-grafeas note vulnerabilities <vulnerabilityId from previous>
     nextlinux-grafeas note packages

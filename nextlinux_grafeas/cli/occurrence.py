@@ -32,10 +32,10 @@ def package_vulnerabilities(input_image_package):
     pkg_name_set = None
 
     try:
-        db_connect = os.environ["ANCHORE_DB_CONNECT"]
+        db_connect = os.environ["NEXTLINUX_DB_CONNECT"]
         nextlinux_grafeas.cli.utils.do_dbconnect(db_connect)
     except Exception as err:
-        raise Exception ("set ANCHORE_DB_CONNECT to a correct nextlinux-engine DB connect string - exception: " + str(err))
+        raise Exception ("set NEXTLINUX_DB_CONNECT to a correct nextlinux-engine DB connect string - exception: " + str(err))
 
     try:
         if input_image_package:

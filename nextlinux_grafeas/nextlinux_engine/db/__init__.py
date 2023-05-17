@@ -1,7 +1,7 @@
 from .entities.common import session_scope, Session, do_upgrade, initialize
 from .entities.common import get_thread_scoped_session, end_session
 
-from .entities.catalog import Anchore
+from .entities.catalog import Nextlinux
 from .entities.catalog import ArchiveDocument
 from .entities.catalog import CatalogImage
 from .entities.catalog import CatalogImageDocker

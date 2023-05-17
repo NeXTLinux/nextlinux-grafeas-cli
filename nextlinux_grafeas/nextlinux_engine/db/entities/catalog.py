@@ -9,7 +9,7 @@ from sqlalchemy import inspect
 
 from .common import Base, nextlinux_now
 
-class Anchore(Base):
+class Nextlinux(Base):
     __tablename__ = 'nextlinux'
 
     service_version = Column(String, primary_key=True)
